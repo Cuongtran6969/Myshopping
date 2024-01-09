@@ -1,0 +1,324 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hot news</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <section id="header">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-sm-1 col-md-3 logo-box">
+                    <div class="header-logo">
+                        <a href="home">
+                            <span class="header-logo_name">Sell-phone</span>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTFGN0JGRkVDMEM1MTFFQTkwMkZBOEFENzdFODgwMUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTFGN0JGRkZDMEM1MTFFQTkwMkZBOEFENzdFODgwMUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MUY3QkZGQ0MwQzUxMUVBOTAyRkE4QUQ3N0U4ODAxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MUY3QkZGREMwQzUxMUVBOTAyRkE4QUQ3N0U4ODAxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgpTqXEAAAhlSURBVHja7JwLbBTH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"
+                                alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 search-box">
+                    <div class="input-box">
+                        <div class="search-icon">
+                            <i class='bx bx-search'></i>
+                        </div>
+                        <div class="search-input">
+                            <input type="text" placeholder="Search for products, brands and more"
+                                aria-label="Example text with button addon">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 col-md-4 nav-menu_box">
+                    <div class="row">
+                        <div class="col">
+                            <div class="user-status">
+                                <div class="user-logo">
+                                    <i class='bx bx-user'></i>
+                                </div>
+                                <span class="user-title">Profile</span>
+                                <div class="user-box_access">
+                                    <div class="user-box-header">
+                                        <!-- access -->
+                                        <div class="user-access">
+                                            <a href="/profile.html" class="d-block">
+                                                <img src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    alt="">
+                                            </a>
+                                            <div class="user-access-info">
+                                                <span>Eden Smith</span>
+                                                <p>Los Angeles, CA</p>
+                                            </div>
+                                            <a href="#" class="logout-link">
+                                                <div class="logout-button">
+                                                    Logout
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- not access -->
+                                        <!-- <div class="user-not-access">
+                                            <span class="not-access-title">Wellcome</span>
+                                            <p>To access account and manage orders</p>
+                                            <a href="#" class="login-link">
+                                                <div class="login-button">
+                                                    Login / Signup
+                                                </div>
+                                            </a>
+                                        </div> -->
+
+                                    </div>
+                                    <hr>
+                                    <ul class="user-access-link">
+                                        <li><a href="#">Orders</a></li>
+                                        <li><a href="#">Wishlist</a></li>
+                                        <li><a href="#">Gift Cards</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li class="access-new">
+                                            <a href="#">Myntra Insider</a>
+                                            <div class="special">New</div>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <ul class="page-access-link">
+                                        <li><a href="#">Myntra Credit</a></li>
+                                        <li><a href="#">Coupons</a></li>
+                                        <li><a href="#">Saved Cards</a></li>
+                                        <li><a href="#">Saved VPA</a></li>
+                                        <li><a href="#">Saved Addresses</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="message-status">
+                                <div class="bell-logo">
+                                    <i class='bx bx-bell'></i>
+                                </div>
+                                <span class="love-title">Notification
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a href="cartegories.html" class="d-block">
+                                <div class="cart-status">
+                                    <div class="cart-logo">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </div>
+                                    <span class="cart-title">Bag 0</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="px-5">
+        <div class="container"></div>
+        <div>&nbsp;</div>
+        <ol>
+        </ol>
+
+        <h1 style="text-align:center"><span style="font-size:26px"><strong>Điểm danh TOP 5 điện thoại Samsung chơi Free
+                    Fire ph&acirc;n kh&uacute;c gi&aacute; rẻ - tầm trung</strong></span></h1>
+
+        <p><img src="https://images.fpt.shop/unsafe/72x72/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/10/25/638338459519947351_avtt.jpg"
+                style="height:20px; width:20px" />Hải v&agrave;o ng&agrave;y 07/12/2023&nbsp;<a
+                href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-samsung-choi-free-fire-169026#root-comment">0
+                Hỏi &amp; Đ&aacute;p</a></p>
+
+        <h2>Bạn đang t&igrave;m kiếm điện thoại Samsung chơi Free Fire mượt nhưng vẫn đảm bảo ti&ecirc;u ch&iacute;
+            gi&aacute; cả phải chăng? Nếu vậy, nhất định kh&ocirc;ng n&ecirc;n bỏ qua 5 gợi &yacute; dưới đ&acirc;y từ
+            FPT Shop. Với ưu điểm m&agrave;n h&igrave;nh lớn, cấu h&igrave;nh ổn, pin tr&acirc;u, chắc chắn những sản
+            phẩm n&agrave;y sẽ đ&aacute;p ứng được mọi kỳ vọng của bạn.</h2>
+
+        <ul>
+            <li>
+                <h2><span style="font-size:18px"><a
+                            href="https://fptshop.com.vn/tin-tuc/tin-khuyen-mai/samsung-ra-mat-samsung-finance-giai-phap-tra-gop-moi-163605">FPT
+                            Shop triển khai chương tr&igrave;nh Samsung Finance+ - Giải ph&aacute;p trả g&oacute;p
+                            mới</a></span></h2>
+            </li>
+            <li>
+                <h2><span style="font-size:18px"><a
+                            href="https://fptshop.com.vn/tin-tuc/danh-gia/top-dien-thoai-gia-re-tot-nhat-2023-cua-samsung-161834">Top
+                            điện thoại gi&aacute; rẻ tốt nhất 2023 của Samsung</a></span></h2>
+            </li>
+            <li>
+                <h2><span style="font-size:18px"><a
+                            href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-choi-game-duoi-10-trieu-166486">Đ&acirc;u
+                            l&agrave; TOP 5 điện thoại chơi game dưới 10 triệu đ&aacute;ng &ldquo;xuống tiền&rdquo; nhất
+                            năm 2023?</a></span></h2>
+            </li>
+        </ul>
+
+        <p>XEM NHANH</p>
+
+        <ul>
+            <li><span style="font-size:22px"><a
+                        href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-samsung-choi-free-fire-169026#1SamsungGalaxyA05s">1.
+                        Samsung Galaxy A05s</a></span></li>
+            <li><span style="font-size:22px"><a
+                        href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-samsung-choi-free-fire-169026#2SamsungGalaxyA235G">2.
+                        Samsung Galaxy A23 5G</a></span></li>
+            <li><span style="font-size:22px"><a
+                        href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-samsung-choi-free-fire-169026#3SamsungGalaxyM345G">3.
+                        Samsung Galaxy M34 5G</a></span></li>
+            <li><span style="font-size:22px"><a
+                        href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-samsung-choi-free-fire-169026#4SamsungGalaxyA345G">4.
+                        Samsung Galaxy A34 5G</a></span></li>
+            <li><span style="font-size:22px"><a
+                        href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-samsung-choi-free-fire-169026#5SamsungGalaxyA545G">5.
+                        Samsung Galaxy A54 5G</a></span></li>
+            <li><span style="font-size:22px"><a
+                        href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-samsung-choi-free-fire-169026#Tamket">Tạm
+                        kết</a></span></li>
+        </ul>
+
+        <p><span style="font-size:22px">Samsung l&agrave; một trong những h&atilde;ng&nbsp;<a
+                    href="https://fptshop.com.vn/dien-thoai">điện thoại</a>&nbsp;được ưa chuộng h&agrave;ng đầu hiện
+                nay. Samsung hiện đang sở hữu danh mục sản phẩm đa dạng, phục vụ mọi mục đ&iacute;ch của người
+                d&ugrave;ng. Trong b&agrave;i viết n&agrave;y, FPT Shop sẽ bật m&iacute; cho bạn 5 điện thoại Samsung
+                chơi Free Fire đ&aacute;ng sở hữu năm 2023 nh&eacute;.</span></p>
+
+        <h2><span style="font-size:22px"><strong>1. Samsung Galaxy A05s</strong></span></h2>
+
+        <p><span style="font-size:22px">Tuy gi&aacute; b&aacute;n chỉ 3.99 triệu đồng nhưng&nbsp;<a
+                    href="https://fptshop.com.vn/dien-thoai/samsung-galaxy-a05s">Samsung Galaxy A05s</a>&nbsp;được trang
+                bị m&agrave;n h&igrave;nh 6.7 inch, độ ph&acirc;n giải FHD+, tần số qu&eacute;t 90Hz. Đ&acirc;y
+                l&agrave; những th&ocirc;ng số m&agrave;n h&igrave;nh ấn tượng tạo n&ecirc;n trải nghiệm gaming tốt, đồ
+                họa v&agrave; h&igrave;nh ảnh game sống động, ch&acirc;n thực, c&aacute;c thao t&aacute;c điều hướng
+                cũng mượt m&agrave;. Với sự g&oacute;p mặt của chipset Snapdragon 680, game Free Fire cũng như
+                c&aacute;c tựa game kh&aacute;c sẽ được xử l&yacute; ổn thỏa, đồng thời tiết kiệm điện năng tối
+                ưu.</span></p>
+
+        <p><img alt="TOP 5 điện thoại Samsung chơi Free Fire (Hình 1)"
+                src="https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/169026/Originals/dien-thoai-samsung-choi-free-fire-1.jpg"
+                style="height:640px; width:960px" /></p>
+
+        <p><span style="font-size:22px">M&aacute;y sở hữu RAM 4GB v&agrave; bộ nhớ trong 128GB. Hoạt động đa nhiệm vẫn
+                diễn ra su&ocirc;n sẻ với độ trễ thấp, bạn cũng thoải m&aacute;i tải th&ecirc;m nhiều tựa game v&agrave;
+                ứng dụng cần thiết kh&ocirc;ng cần d&ugrave;ng th&ecirc;m thẻ microSD. Cung cấp năng lượng cho
+                m&aacute;y l&agrave; thỏi pin 5000mAh đi c&ugrave;ng sạc nhanh 25W t&aacute;i tạo pin nhanh ch&oacute;ng
+                hơn để thiết bị lu&ocirc;n sẵn s&agrave;ng đồng h&agrave;nh c&ugrave;ng bạn.</span></p>
+
+        <h2><span style="font-size:28px"><strong>2. Samsung Galaxy A23 5G</strong></span></h2>
+
+        <p><span style="font-size:22px"><a href="https://fptshop.com.vn/dien-thoai/samsung-galaxy-a23">Samsung Galaxy
+                    A23 5G</a>&nbsp;l&agrave; lựa chọn tiếp theo trong top điện thoại Samsung chơi Free Fire ấn tượng
+                hiện nay. Kết nối 5G gi&uacute;p bạn l&agrave;m chủ mọi cuộc chơi v&agrave; chiến hết m&igrave;nh trong
+                những tựa game online. Với Free Fire, bạn sẽ kh&ocirc;ng cần lo lắng về khả năng xử l&yacute; v&igrave;
+                m&aacute;y được trang bị chipset Snapdragon 695 được tối ưu kh&aacute; đầy đủ cho c&aacute;c tựa game
+                hot nhất hiện nay, mang tới kh&ocirc;ng gian gaming ho&agrave;n hảo.</span></p>
+
+        <p><img alt="TOP 5 điện thoại Samsung chơi Free Fire (Hình 2)"
+                src="https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/169026/Originals/dien-thoai-samsung-choi-free-fire-2.jpg"
+                style="height:640px; width:960px" /></p>
+
+        <p><span style="font-size:22px">Chưa dừng lại ở đ&oacute;, chiếc điện thoại Samsung n&agrave;y c&ograve;n
+                c&oacute; chế độ Game Booster với giao diện game chuy&ecirc;n biệt, tối ưu pin v&agrave; nhiệt để trải
+                nghiệm game được liền mạch, độ trễ cực thấp. M&agrave;n h&igrave;nh cũng xứng đ&aacute;ng nhận được một
+                điểm cộng nhờ tần số qu&eacute;t 120Hz, đ&acirc;y l&agrave; một th&ocirc;ng số đ&aacute;ng mơ ước nếu
+                muốn thao t&aacute;c game nhanh ch&oacute;ng, mượt m&agrave;.</span></p>
+
+        <p>&nbsp;</p>
+
+        <h2><span style="font-size:28px"><strong>3. Samsung Galaxy M34 5G</strong></span></h2>
+
+        <p><span style="font-size:22px">Nhắc tới điện thoại Samsung chơi Free Fire đ&aacute;ng mua hiện nay cũng
+                kh&ocirc;ng thể bỏ qua&nbsp;<a href="https://fptshop.com.vn/dien-thoai/samsung-galaxy-m34-5g">Samsung
+                    Galaxy M34 5G</a>. M&agrave;n h&igrave;nh 6.5 inch tuy kh&ocirc;ng xuất sắc về k&iacute;ch thước
+                nhưng nhờ c&oacute; tấm nền Super AMOLED, độ ph&acirc;n giải FHD+ v&agrave; tần số qu&eacute;t 120Hz,
+                d&ugrave; l&agrave; lướt web, xem phim hay chơi game đều mang đến trải nghiệm ấn tượng.</span></p>
+
+        <p><img alt="TOP 5 điện thoại Samsung chơi Free Fire (Hình 3)"
+                src="https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/169026/Originals/dien-thoai-samsung-choi-free-fire-3.jpg"
+                style="height:640px; width:960px" /></p>
+
+        <p><span style="font-size:22px">Con chip 8 nh&acirc;n Exynos 1280 với xung nhịp tối đa 2.4GHz đem đến hiệu năng
+                đ&aacute;ng gờm trong ph&acirc;n kh&uacute;c tầm trung, c&aacute;c m&agrave;n gaming kh&oacute; nhằn
+                cũng kh&ocirc;ng l&agrave;m kh&oacute; được vi xử l&yacute; n&agrave;y. B&ecirc;n cạnh đ&oacute;, sự bất
+                ngờ cũng nằm ở RAM 8GB cho khả năng đa nhiệm &ldquo;bậc thầy&rdquo;, ngay cả những smartphone cao cấp
+                hơn cũng chưa chắc so b&igrave; được. Thỏi pin 6000mAh quyết định đến sự liền mạch của trải nghiệm. Với
+                dung lượng n&agrave;y, sạc pin 1 lần d&ugrave;ng cho 1 - 2 ng&agrave;y l&agrave; điều kh&ocirc;ng cần
+                phải b&agrave;n c&atilde;i.</span></p>
+
+        <h2><span style="font-size:28px"><strong>4. Samsung Galaxy A34 5G</strong></span></h2>
+
+        <p><span style="font-size:22px"><a href="https://fptshop.com.vn/dien-thoai/samsung-galaxy-a34-5g">Samsung Galaxy
+                    A34 5G</a>&nbsp;sẽ khiến c&aacute;c đối thủ kh&aacute;c trong ph&acirc;n kh&uacute;c phải trầm trồ
+                bởi chipset Dimensity 1080 xung nhịp tối đa 2.6GHz c&ugrave;ng sự g&oacute;p mặt của GPU ARM Mali-G68
+                n&acirc;ng cao khả năng xử l&yacute; đồ họa, để bạn tự tin &ldquo;chiến&rdquo; mọi game. M&aacute;y cũng
+                c&oacute; sẵn 8GB RAM đem đến hiệu quả đa nhiệm dễ d&agrave;ng, cho ph&eacute;p người d&ugrave;ng sử
+                dụng nhiều ứng dụng c&ugrave;ng l&uacute;c kh&ocirc;ng lo giật lag.</span></p>
+
+        <p><img alt="TOP 5 điện thoại Samsung chơi Free Fire (Hình 4)"
+                src="https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/169026/Originals/dien-thoai-samsung-choi-free-fire-4.jpg"
+                style="height:640px; width:960px" /></p>
+
+        <p><span style="font-size:22px">M&agrave;n h&igrave;nh 6.6 inch tốc độ l&agrave;m tươi 120Hz cho khả năng phản
+                hồi nhanh, c&aacute;c thao t&aacute;c diễn ra si&ecirc;u mượt m&agrave;, mang tới những trận game
+                b&ugrave;ng nổ. Với độ s&aacute;ng tối đa 1000 nits, game thủ c&oacute; thể tự tin chơi game trong mọi
+                điều kiện &aacute;nh s&aacute;ng, từ trong nh&agrave; đến ngo&agrave;i trời. Sạc nhanh 25W r&uacute;t
+                ngắn thời gian l&agrave;m đầy cho thỏi pin 5000mAh để người d&ugrave;ng kh&ocirc;ng cần đợi l&acirc;u.
+                Dung lượng pin n&agrave;y cũng kh&aacute; ấn tượng gi&uacute;p m&aacute;y duy tr&igrave; hoạt động tốt
+                từ s&aacute;ng đến tối.</span></p>
+
+        <h2><span style="font-size:28px"><strong>5. Samsung Galaxy A54 5G</strong></span></h2>
+
+        <p><span style="font-size:22px">Kh&eacute;p lại 5 điện thoại Samsung chơi Free Fire m&agrave; FPT Shop muốn gợi
+                &yacute; cho bạn l&agrave;&nbsp;<a
+                    href="https://fptshop.com.vn/dien-thoai/samsung-galaxy-a54-5g">Samsung Galaxy A54 5G</a>. D&ugrave;
+                thiết kế nhỏ gọn, m&agrave;n h&igrave;nh chỉ 6.4 inch nhưng x&eacute;t về cấu h&igrave;nh v&agrave; hiệu
+                năng th&igrave; kh&ocirc;ng thể xem nhẹ. Trước ti&ecirc;n l&agrave; tấm nền Super AMOLED, độ ph&acirc;n
+                giải FHD+ thể hiện nội dung sắc n&eacute;t, r&otilde; r&agrave;ng. Tiếp đến l&agrave; vi xử l&yacute;
+                Exynos 1380 xung nhịp tối đa 2.4GHz vận h&agrave;nh mượt m&agrave; mọi t&aacute;c vụ từ cơ bản đến phức
+                tạp. Đ&acirc;y cũng được đ&aacute;nh gi&aacute; l&agrave; một chipset l&yacute; tưởng để bạn dễ
+                d&agrave;ng &ldquo;chiến&rdquo; mọi game, &ldquo;c&acirc;n&rdquo; team v&agrave; leo rank c&ugrave;ng
+                đồng đội.&nbsp;</span></p>
+
+        <p><img alt="TOP 5 điện thoại Samsung chơi Free Fire (Hình 5)"
+                src="https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/169026/Originals/dien-thoai-samsung-choi-free-fire-5.jpg"
+                style="height:640px; width:960px" /></p>
+
+        <p>&nbsp;</p>
+
+        <h2><span style="font-size:28px"><strong>Tạm kết</strong></span></h2>
+
+        <p><span style="font-size:22px">Vừa rồi l&agrave; chia sẻ của FPT Shop về danh s&aacute;ch điện thoại Samsung
+                chơi Free Fire bạn c&oacute; thể c&acirc;n nhắc chọn mua hiện nay. Hy vọng bạn sẽ t&igrave;m được cỗ
+                m&aacute;y giải tr&iacute; tốt v&agrave; ph&ugrave; hợp nhất.</span></p>
+
+        <p><span style="font-size:22px">Gi&aacute; b&aacute;n mang t&iacute;nh chất tham khảo tại thời điểm viết
+                b&agrave;i, để biết th&ocirc;ng tin chi tiết, bạn h&atilde;y li&ecirc;n hệ hotline 1800 6601 hoặc truy
+                cập trang m&ocirc; tả sản phẩm tại website FPT Shop nh&eacute;.</span></p>
+
+        <p><span style="font-size:20px"><em>Xem th&ecirc;m</em>:</span></p>
+
+        <ul>
+            <li><strong><em><span style="font-size:20px"><a
+                                href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-choi-lien-quan-duoi-4-trieu-168102">Điểm
+                                danh 5 điện thoại chơi Li&ecirc;n Qu&acirc;n dưới 4 triệu cấu h&igrave;nh tốt nhất tại
+                                FPT Shop</a></span></em></strong></li>
+            <li><strong><em><span style="font-size:20px"><a
+                                href="https://fptshop.com.vn/tin-tuc/danh-gia/dien-thoai-choi-lien-quan-168099">Bật
+                                m&iacute; 5 điện thoại chơi Li&ecirc;n Qu&acirc;n mượt nhất 2023: Hiệu năng tốt,
+                                gi&aacute; rẻ trong tầm tay</a></span></em></strong></li>
+        </ul>
+
+        </div>
+    </section>
+</body>
+
+</html>
